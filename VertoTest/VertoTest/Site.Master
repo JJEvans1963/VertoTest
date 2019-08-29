@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="VertoTest.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Opticron</title>
+    <link rel="stylesheet" href="Content/foundation.css">
+    <link rel="stylesheet" href="Content/app.css">
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div>
+            <img src="Images/OpticronLogo.png" />
+        </div>
+        <div class="top-bar cell">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li><a href="#">Our Products</a></li>
+                    <li><a href="#">Where to Buy</a></li>
+                    <li><a href="#">News & Reviews</a></li>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">My Opticron</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><input type="search" placeholder="Search"></li>
+                    <li><button type="button" class="button">Search</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <div class="grid-x grid-padding-x cell primary callout">
+                    <div class="large-6 medium-6">
+                        <div class="primary">
+                            <p>Opticron Unit 21, Titan Court, Luton Bedfordshire. LU4 8EF. UK</p>
+                        </div>
+                    </div>
+
+                    <div class="large-6 medium-6">
+                        <div class="primary">
+                            <p>call 01582 726522</p>
+                            <p>email us sales@opticron.co.uk</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </form>
+
+    <script src="~/Scripts/vendor/jquery.js"></script>
+    <script src="~/Scripts/vendor/what-input.js"></script>
+    <script src="~/Scripts/vendor/foundation.js"></script>
+    <script src="~/Scripts/app.js"></script>
+
+</body>
+</html>
